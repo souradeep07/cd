@@ -11,8 +11,8 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
-  + minutes + "M " + seconds + "S ";
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "Cheers!!!";
@@ -22,8 +22,8 @@ var x = setInterval(function() {
 <style>
 p{
   text-align: center;
-  font-size: 8vw;
-  margin-top: 20px;
+  font-size: 10vw;
+  margin-top: 100px;
   font-family: 'Courier';
 }
 </style>
