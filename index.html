@@ -15,11 +15,21 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         document.getElementById("countdown").innerHTML =
           days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("countdown").style.color = getRandomColor();
         if (distance < 0) {
           clearInterval(x);
           document.getElementById("countdown").innerHTML = "Cheers!!!";
         }
       }, 1000);
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
     </script>
     <style>
       p {
